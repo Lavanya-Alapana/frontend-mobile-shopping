@@ -19,7 +19,7 @@ function Login() {
    
     try{
       
-      const res=await axios.post('http://localhost:8000/api/login',user, {
+      const res=await axios.post('https://backend-shopping-avqy.onrender.com/api/login',user, {
         headers: { "Content-Type": "application/json" }
       });
 

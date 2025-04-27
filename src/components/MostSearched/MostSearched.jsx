@@ -5,7 +5,7 @@ import Products from '../../pages/Searched/Products'
 function MostSearched() {
   const[mostSearched,setMostSearched]=useState([])
   useEffect(()=>{
-  axios.get('http://localhost:8000/api/search/getProducts')
+  axios.get('https://backend-shopping-avqy.onrender.com/api/search/getProducts')
   .then((response)=>{
     setMostSearched(response.data)
   })

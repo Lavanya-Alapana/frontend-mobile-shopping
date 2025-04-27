@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/cart'; // Adjust based on your server URL
+const API_URL = 'https://backend-shopping-avqy.onrender.com/api/cart'; // Adjust based on your server URL
 
 // Add item to cart
 export const addToCartApi = async (productId, quantity, token) => {

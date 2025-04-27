@@ -7,7 +7,7 @@ function FlashDeals() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/deal/getDeal")
+      .get("https://backend-shopping-avqy.onrender.com/api/deal/getDeal")
       .then((response) => {
         setImages(response.data);
       })

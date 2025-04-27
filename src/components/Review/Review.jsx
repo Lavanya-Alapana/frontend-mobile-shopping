@@ -7,7 +7,7 @@ function Review() {
   const [startIndex, setStartIndex] = useState(0);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/review/getReview')
+    axios.get('https://backend-shopping-avqy.onrender.com/api/review/getReview')
       .then(res => setReviews(res.data))
       .catch(err => console.log(err));
   }, []);

@@ -29,7 +29,7 @@ function Register() {
     e.preventDefault();
     try{
     
-      const res=await axios.post('http://localhost:8000/api/register',user);
+      const res=await axios.post('https://backend-shopping-avqy.onrender.com/api/register',user);
       toast.success("User Registered Successfully");
       setUser({firstname:"",lastname:"",email:"",password:""});
       
