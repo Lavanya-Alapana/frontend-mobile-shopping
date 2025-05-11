@@ -18,11 +18,21 @@ const ProductDetails = ({ product }) => {
     try {
       await addToCartApi(product._id, parseInt(quantity), token);
       toast.success("Added to cart!");
+      window.location.href='/cart';
     } catch (error) {
       console.error(error);
       toast.error("Failed to add to cart");
     }
   };
+
+  const handleBuyNow = () => {
+    localStorage.setItem("buyNowProduct", JSON.stringify({
+      productId: product._id,
+      quantity,
+    }));
+    navigate("/order");
+  };
+  
 
   return (
     <>
@@ -62,7 +72,10 @@ const ProductDetails = ({ product }) => {
             >
               Add to Cart
             </button>
-            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md font-bold">
+            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md font-bold"
+            
+            
+            onClick={handleBuyNow}>
               Buy Now
             </button>
           </div>

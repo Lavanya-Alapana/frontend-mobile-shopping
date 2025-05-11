@@ -124,7 +124,7 @@ function Header() {
               </div>
 
               <ul className={`flex gap-10 font-semibold tracking-wider text-md transition-all duration-300 ${isScrolled ? 'ml-auto' : 'mx-auto'}`}>
-                {["HOME", "PRODUCTS", "CART", "WISHLIST", "CONTACT"].map((item) => (
+                {["HOME", "PRODUCTS", "CART", "ORDERS", "CONTACT"].map((item) => (
                   <li key={item} className="relative group">
                     <Link
                       to={`/${item.toLowerCase()}`}
@@ -143,7 +143,7 @@ function Header() {
           <div className={`lg:hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
             <nav className="bg-white border-t border-gray-100">
               <ul className="px-4 py-2">
-                {["HOME", "PRODUCTS", "CART", "WISHLIST", "CONTACT"].map((item) => (
+                {["HOME", "PRODUCTS", "CART", "ORDERS", "CONTACT"].map((item) => (
                   <li key={item} className="border-b border-gray-100 last:border-none">
                     <Link
                       to={`/${item.toLowerCase()}`}

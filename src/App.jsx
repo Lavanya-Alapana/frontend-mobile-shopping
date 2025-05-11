@@ -6,8 +6,10 @@ import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import Products from "./components/Products/Products";
 import Cart from "./pages/Cart/Cart";
+import Orders from "./pages/Orders/Orders"
 
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import MyOrders from "./components/MyOrder/MyOrder";
 
 function App() {
   
@@ -26,6 +28,8 @@ function App() {
             <Route path="/product/:id" element={<ProductDetails />} />
 
           <Route path="/cart" element={<Cart/>} />
+          <Route path="/order" element={<Orders/>} />
+          <Route path="/orders" element={<MyOrders/>} />
           </Routes>
        
       </Router>
